@@ -58,14 +58,3 @@ print(response.text)
 tekst = response.json()
 
 df = pd.DataFrame.from_dict(tekst)
-
-
-df_data = pd.DataFrame(df['data'].values.tolist(), index=df.index)
-df2 = pd.concat([df, df_data], axis=1).drop('data', axis=1)
-df_data = pd.DataFrame(df2['weather'].values.tolist(), index=df.index) 
-df2 = pd.concat([df2, df_data], axis=1).drop('weather', axis=1)
-
-st.dataframe(df2)
-
-
-print(df2.info())
