@@ -51,7 +51,6 @@ for obj in combo_list:
    if (result == obj.provincie):
       querystring = {"lat": obj.latitude,"lon":obj.longitude, "output": "json", "compact": True, "verbose": False}
 
-df = pd.DataFrame.from_dict(tekst)
 st.write(f'{querystring}')
         
 response = requests.request("GET", url, headers=headers, params=querystring)
