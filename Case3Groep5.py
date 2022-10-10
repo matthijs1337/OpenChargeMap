@@ -8,6 +8,15 @@ Created on Mon Oct 10 10:59:05 2022
 import pandas as pd
 import requests
 import json
+import streamlit as st
+import plotly.graph_objects as go
+#import plotly.express as px
+
+import datetime as dt
+from dateutil.relativedelta import relativedelta # to add days or years
+
+import plotly.io as pio
+pio.renderers.default = 'browser'
 
 url = "https://api.openchargemap.io/v3/poi"
 
@@ -22,3 +31,5 @@ response = requests.request("GET", url, headers=headers, params=params)
 json=response.json()
 Open_Charge_Map=pd.DataFrame(json)
 Open_Charge_Map.head()
+
+st.title("Hoi")
