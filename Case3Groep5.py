@@ -19,9 +19,9 @@ import plotly.io as pio
 pio.renderers.default = 'browser'
 
 #klasse van gemeente
-class gemeente: 
-   def __init__ (self, gemeente, latitude, longitude): 
-     self.gemeente = gemeente
+class provincie: 
+   def __init__ (self, provincie, latitude, longitude): 
+     self.gemeente = provincie
      self.longitude = longitude 
      self.latitude = latitude 
      def show_all(self): 
@@ -46,11 +46,11 @@ Open_Charge_Map=pd.DataFrame(json)
 
 combo_list=[] 
  original_list = [] 
- combo_list.append(Land("Arras, France", 50.292000, 2.780000))
+ combo_list.append(provincie("Arras, France", 50.292000, 2.780000))
 
 
 for obj in combo_list: 
-   original_list.append(obj.land) 
+   original_list.append(obj.provincie) 
   
  #radio 
  result = st.sidebar.selectbox('Select a city', original_list) 
