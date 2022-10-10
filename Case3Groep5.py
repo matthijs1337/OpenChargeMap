@@ -49,7 +49,7 @@ st.write(f'De gekozen plek {result}')
 
 for obj in combo_list:
    if (result == obj.provincie):
-      querystring = {"lat": obj.latitude,"lon":obj.longitude, "output": "json", "compact": True, "verbose": False}
+      querystring = {"latitude": obj.latitude,"longitude":obj.longitude, "output": "json", "compact": True, "verbose": False}
 
 st.write(f'{querystring}')
         
