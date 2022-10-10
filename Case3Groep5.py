@@ -12,7 +12,7 @@ import streamlit as st
 
 class Provincie:
   def __init__ (self, provincie, longitude, latitude):
-    self.land = provincie
+    self.provincie = provincie
     self.longitude = longitude
     self.latitude = latitude
     
