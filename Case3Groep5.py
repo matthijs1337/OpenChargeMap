@@ -39,8 +39,6 @@ params2= {"output": "json", "compact": True, "verbose": False}
 
 headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-a14f-16f0244ddd38"}
 
-json=response.json()
-Open_Charge_Map=pd.DataFrame(json)
 
 combo_list=[]
 original_list = []
@@ -57,7 +55,8 @@ for obj in combo_list:
         querystring = {"lat":obj.latitude, 'lng':obj.longitude}
         
 response = requests.request("GET", url, headers=headers, params=(querystring, params2))
-
+json=response.json()
+Open_Charge_Map=pd.DataFrame(json)
 st.title("Hoi")
 st.dataframe(Open_Charge_Map)
 
