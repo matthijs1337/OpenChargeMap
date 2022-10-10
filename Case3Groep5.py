@@ -22,8 +22,8 @@ pio.renderers.default = 'browser'
 class provincie: 
    def __init__ (self, provincie, latitude, longitude): 
      self.gemeente = provincie
-     self.longitude = longitude 
-     self.latitude = latitude 
+     self.longitude = longitude
+     self.latitude = latitude
      def show_all(self): 
          print (self.land, self.latitude, self.longitude)
 
