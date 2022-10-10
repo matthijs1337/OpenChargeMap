@@ -51,7 +51,7 @@ for obj in original_list:
 result = st.sidebar.selectbox('Selecteer een Provincie', original_list)
   
 for obj in combo_list: 
-   if (result == obj.provincie):
+   if (result = obj.provincie):
         querystring = {"lat":obj.latitude, 'lng':obj.longitude}
         
 response = requests.request("GET", url, headers=headers, params=(querystring, params2))
