@@ -67,9 +67,11 @@ st.write(f'{querystring}')
 
 
 response = requests.request("GET", url, headers=headers, params=querystring)
+print(response.text)
+tekst = response.json()
+Open_Charge_Map=pd.DataFrame(a)
+Open_Charge_Map=pd.DataFrame(tekst)
 st.title("Hoi")
-json=response.json()
-Open_Charge_Map=pd.DataFrame(json)
 st.dataframe(Open_Charge_Map)
 
 
