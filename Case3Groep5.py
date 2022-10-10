@@ -22,9 +22,9 @@ pio.renderers.default = 'browser'
 class provincie: 
    def __init__ (self, provincie, latitude, longitude): 
      self.gemeente = provincie
-     self.longitude = longitude
-     self.latitude = latitude
-     def show_all(self): 
+     self.longitude = lng
+     self.latitude = lat
+     def show_all(self): 
          print (self.provincie, self.latitude, self.longitude)
 
 
