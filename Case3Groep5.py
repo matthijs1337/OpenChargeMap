@@ -70,7 +70,6 @@ response = requests.request("GET", url, headers=headers, params=querystring)
 st.title("Hoi")
 json=response.json()
 Open_Charge_Map=pd.DataFrame(json)
-Open_Charge_Map()
 st.dataframe(Open_Charge_Map)
 
 
