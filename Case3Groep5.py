@@ -28,7 +28,7 @@ headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-
 
 combo_list=[]
 original_list = []
-combo_list.append(Provincie("Noord-Holland", 52.3750294, 4.6309628))
+combo_list.append(Provincie("Noord-Holland", 52.375029, 4.630962))
 combo_list.append(Provincie("Zuid-Holland", 51.9862, 4.467313))
 combo_list.append(Provincie("Zeeland", 51.9862, 4.467313))
 combo_list.append(Provincie("Noord-Brabant", 51.9862, 4.467313))
