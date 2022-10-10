@@ -30,6 +30,7 @@ response = requests.request("GET", url, headers=headers, params=params)
 
 json=response.json()
 Open_Charge_Map=pd.DataFrame(json)
-Open_Charge_Map.head()
 
 st.title("Hoi")
+st.dataframe(Open_Charge_Map)
+
