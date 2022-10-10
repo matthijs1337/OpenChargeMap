@@ -39,7 +39,7 @@ combo_list.append(Provincie("Drenthe", 52.947601, 6.623058))
 combo_list.append(Provincie("Groningen", 53.220028, 6.570447))
 combo_list.append(Provincie("Friesland", 53.164164, 5.781754))
 combo_list.append(Provincie("Gelderland", 52.04515, 5.871823))
-combo_list.append(Provincie("Utrecht",52.090737, 5.121420))
+combo_list.append(Provincie("Utrecht",52.1195, 5.1944))
 
 for obj in combo_list:
   original_list.append(obj.provincie)
