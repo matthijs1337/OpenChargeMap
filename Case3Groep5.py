@@ -22,7 +22,7 @@ class Provincie:
 url = "https://api.openchargemap.io/v3/poi"
 
 
-headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-a14f-16f0244ddd38"}
+headers = {"Content-Type": "application/json", "X-API-Key": "fa5db543-c4ac-4809-8455-9a20a41a021e"}
 
 
 
