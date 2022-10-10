@@ -22,8 +22,8 @@ pio.renderers.default = 'browser'
 class provincie: 
    def __init__ (self, provincie, latitude, longitude): 
      self.gemeente = provincie
-     self.longitude = lng
-     self.latitude = lat
+     self.longitude = longitude
+     self.latitude = latitude
      def show_all(self): 
          print (self.provincie, self.latitude, self.longitude)
 
@@ -39,26 +39,25 @@ params2= {"output": "json", "compact": True, "verbose": False}
 
 headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-a14f-16f0244ddd38"}
 
-response = requests.request("GET", url, headers=headers, params=(querystring, params2))
-
 json=response.json()
-Open_Charge_Map=pd.DataFrame(json)()
+Open_Charge_Map=pd.DataFrame(json)
 
 combo_list=[]
 original_list = []
-combo_list.append(Provincie("Arras, France", 50.292000, 2.780000))
+combo_list.append(provincie("Arras, France", 50.292000, 2.780000))
 
-
-for obj in combo_list: 
+for obj in original_list:
    original_list.append(obj.provincie) 
   
- #radio 
- result = st.sidebar.selectbox('Select a city', original_list) 
+#radio 
+result = st.sidebar.selectbox('Selecteer een Provincie', original_list)
   
- for obj in combo_list: 
-     if (result == obj.land): 
-       querystring = {"lat": obj.latitude,"lon":obj.longitude}
+for obj in combo_list: 
+    if (result == obj.provincie):
+        querystring = {"lat":obj.latitude, 'lng':obj.longitude}
         
+response = requests.request("GET", url, headers=headers, params=(querystring, params2))
+
 st.title("Hoi")
 st.dataframe(Open_Charge_Map)
 
