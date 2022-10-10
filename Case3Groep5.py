@@ -18,6 +18,19 @@ from dateutil.relativedelta import relativedelta # to add days or years
 import plotly.io as pio
 pio.renderers.default = 'browser'
 
+#klasse van gemeente
+class gemeente: 
+   def __init__ (self, gemeente, latitude, longitude): 
+     self.gemeente = gemeente
+     self.longitude = longitude 
+     self.latitude = latitude 
+     def show_all(self): 
+         print (self.land, self.latitude, self.longitude)
+
+
+
+
+
 url = "https://api.openchargemap.io/v3/poi"
 
 params = {"latitude": 52.0907374, "longitude": -5.1214201, "countrycode": "NL", 
@@ -31,6 +44,21 @@ response = requests.request("GET", url, headers=headers, params=params)
 json=response.json()
 Open_Charge_Map=pd.DataFrame(json)
 
+combo_list=[] 
+ original_list = [] 
+ combo_list.append(Land("Arras, France", 50.292000, 2.780000))
+
+
+for obj in combo_list: 
+   original_list.append(obj.land) 
+  
+ #radio 
+ result = st.sidebar.selectbox('Select a city', original_list) 
+  
+ for obj in combo_list: 
+     if (result == obj.land): 
+       querystring = {"lat": obj.latitude,"lon":obj.longitude}
+        
 st.title("Hoi")
 st.dataframe(Open_Charge_Map)
 
