@@ -66,6 +66,8 @@ st.write(f'{querystring}')
 #############################
 
 
+st.write(f'{querystring}')
+
 response = requests.request("GET", url, headers=headers, params=querystring)
 print(response.text)
 tekst = response.json()
