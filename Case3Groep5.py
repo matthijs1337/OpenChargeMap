@@ -49,7 +49,7 @@ result = st.sidebar.selectbox('Selecteer een Provincie', original_list)
   
 for obj in combo_list: 
    if (result == obj.provincie):
-        querystring = {"lat":obj.latitude, 'lng':obj.longitude, "output": "json", "compact": True, "verbose": False}
+        querystring = {"lat":obj.latitude, "lon":obj.longitude, "output": "json", "compact": True, "verbose": False}
         
 response = requests.get(url, headers=headers, params=querystring)
 a=response.json()
