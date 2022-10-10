@@ -42,11 +42,11 @@ headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-
 response = requests.request("GET", url, headers=headers, params=(querystring, params2))
 
 json=response.json()
-Open_Charge_Map=pd.DataFrame(json)
+Open_Charge_Map=pd.DataFrame(json)()
 
-combo_list=[] 
- original_list = [] 
- combo_list.append(provincie("Arras, France", 50.292000, 2.780000))
+combo_list=[]
+original_list = []
+combo_list.append(Provincie("Arras, France", 50.292000, 2.780000))
 
 
 for obj in combo_list: 
