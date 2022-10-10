@@ -54,7 +54,7 @@ for obj in combo_list:
    if (result == obj.provincie):
         querystring = {"lat":obj.latitude, 'lng':obj.longitude}
         
-response = requests.request("GET", url, headers=headers, params=(querystring, params2))
+response = requests.request("GET", url, headers=headers, params=querystring)
 
 json=response.json()
 Open_Charge_Map=pd.DataFrame(json)
