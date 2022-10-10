@@ -25,7 +25,7 @@ class provincie:
      self.longitude = longitude
      self.latitude = latitude
      def show_all(self): 
-         print (self.land, self.latitude, self.longitude)
+         print (self.provincie, self.latitude, self.longitude)
 
 
 
