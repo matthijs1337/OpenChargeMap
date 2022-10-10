@@ -31,7 +31,7 @@ original_list = []
 combo_list.append(Provincie("Noord-Holland", 52.3750294, 4.6309628))
 
 for obj in combo_list:
-  original_list.append(obj.Provincie)
+  original_list.append(obj.provincie)
 
 result = st.selectbox('Selecteer de provincie', original_list)
 st.write(f'De gekozen plek {result}')
