@@ -42,7 +42,7 @@ headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-
 
 combo_list=[]
 original_list = []
-combo_list.append(provincie("Arras, France", 50.292000, 2.780000))
+combo_list.append(provincie("Noord-Holland", 52.3750294, 4.6309628))
 
 for obj in original_list:
    original_list.append(obj.provincie) 
@@ -55,6 +55,7 @@ for obj in combo_list:
         querystring = {"lat":obj.latitude, 'lng':obj.longitude}
         
 response = requests.request("GET", url, headers=headers, params=(querystring, params2))
+
 json=response.json()
 Open_Charge_Map=pd.DataFrame(json)
 st.title("Hoi")
