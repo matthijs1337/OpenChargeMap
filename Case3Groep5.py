@@ -41,8 +41,8 @@ headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-
 
 response = requests.request("GET", url, headers=headers, params=(querystring, params2)
 
-json=response.json()
-Open_Charge_Map=pd.DataFrame(json)
+#json=response.json()
+#Open_Charge_Map=pd.DataFrame(json)
 
 combo_list=[] 
  original_list = [] 
