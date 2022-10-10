@@ -18,7 +18,7 @@ from dateutil.relativedelta import relativedelta # to add days or years
 import plotly.io as pio
 pio.renderers.default = 'browser'
 
-#klasse van gemeente
+#class provincie
 class Provincie: 
    def __init__ (self, provincie, latitude, longitude): 
      self.provincie = provincie
@@ -52,7 +52,7 @@ result = st.sidebar.selectbox('Selecteer een Provincie', original_list)
   
 for obj in combo_list: 
    if (result == obj.provincie):
-        querystring = {"lat":obj.latitude, 'lng':obj.longitude}
+        querystring = {"lat":obj.latitude, 'lng':obj.longitude, "output": "json", "compact": True, "verbose": False}
         
 response = requests.request("GET", url, headers=headers, params=querystring)
 
