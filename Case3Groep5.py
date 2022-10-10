@@ -39,7 +39,7 @@ url = "https://api.openchargemap.io/v3/poi"
 
 headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-a14f-16f0244ddd38"}
 
-response = requests.request("GET", url, headers=headers, params=(querystring,"output": "json", "compact": True, "verbose": False)
+response = requests.request("GET", url, headers=headers, params=(querystring, "output":"json", "compact": True, "verbose": False)
 
 json=response.json()
 Open_Charge_Map=pd.DataFrame(json)
