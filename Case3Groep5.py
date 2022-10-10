@@ -13,7 +13,7 @@ import json
 url = "https://api.openchargemap.io/v3/poi"
 
 headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-a14f-16f0244ddd38"}
-
+params = {"countrycode": "NL", "output": "json", "compact": True, "verbose": False}
 response = requests.request("GET", url, headers=headers, params=querystring)
 
 json=response.json()
