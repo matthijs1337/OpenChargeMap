@@ -55,9 +55,7 @@ for obj in combo_list:
         querystring = {"lat":obj.latitude, 'lng':obj.longitude, "output": "json", "compact": True, "verbose": False}
         
 response = requests.request("GET", url, headers=headers, params=querystring)
-
-json=response.json()
-Open_Charge_Map=pd.DataFrame(json)
+a=response.json()
+Open_Charge_Map=pd.DataFrame(a)
 st.title("Hoi")
 st.dataframe(Open_Charge_Map)
-
