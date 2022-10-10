@@ -29,6 +29,17 @@ headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-
 combo_list=[]
 original_list = []
 combo_list.append(Provincie("Noord-Holland", 52.3750294, 4.6309628))
+combo_list.append(Provincie("Zuid-Holland", 51.9862, 4.467313))
+combo_list.append(Provincie("Zeeland", 51.9862, 4.467313))
+combo_list.append(Provincie("Noord-Brabant", 51.9862, 4.467313))
+combo_list.append(Provincie("Flevoland", 51.9862, 4.467313))
+combo_list.append(Provincie("Overijssel", 51.9862, 4.467313))
+combo_list.append(Provincie("Limburg", 51.9862, 4.467313))
+combo_list.append(Provincie("Drenthe", 51.9862, 4.467313))
+combo_list.append(Provincie("Groningen", 51.9862, 4.467313))
+combo_list.append(Provincie("Friesland", 51.9862, 4.467313))
+combo_list.append(Provincie("Gelderland", 51.9862, 4.467313))
+combo_list.append(Provincie("Utrecht", 51.9862, 4.467313))
 
 for obj in combo_list:
   original_list.append(obj.provincie)
