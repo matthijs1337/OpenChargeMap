@@ -19,9 +19,9 @@ import plotly.io as pio
 pio.renderers.default = 'browser'
 
 #klasse van gemeente
-class provincie: 
+class Provincie: 
    def __init__ (self, provincie, latitude, longitude): 
-     self.gemeente = provincie
+     self.provincie = provincie
      self.longitude = longitude
      self.latitude = latitude
      def show_all(self): 
@@ -42,7 +42,7 @@ headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-
 
 combo_list=[]
 original_list = []
-combo_list.append(provincie("Noord-Holland", 52.3750294, 4.6309628))
+combo_list.append(Provincie("Noord-Holland", 52.3750294, 4.6309628))
 
 for obj in original_list:
    original_list.append(obj.provincie) 
@@ -51,7 +51,7 @@ for obj in original_list:
 result = st.sidebar.selectbox('Selecteer een Provincie', original_list)
   
 for obj in combo_list: 
-   if (result = obj.provincie):
+   if (result == obj.provincie):
         querystring = {"lat":obj.latitude, 'lng':obj.longitude}
         
 response = requests.request("GET", url, headers=headers, params=(querystring, params2))
