@@ -28,14 +28,11 @@ class Provincie:
          print (self.provincie, self.latitude, self.longitude)
 
 
-
-
-
 url = "https://api.openchargemap.io/v3/poi"
 
 #params = {"latitude": 52.0907374, "longitude": -5.1214201, "countrycode": "NL", 
 
-params2= {"output": "json", "compact": True, "verbose": False}
+#params2= {"output": "json", "compact": True, "verbose": False}
 
 headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-a14f-16f0244ddd38"}
 
@@ -54,7 +51,7 @@ for obj in combo_list:
    if (result == obj.provincie):
         querystring = {"lat":obj.latitude, 'lng':obj.longitude, "output": "json", "compact": True, "verbose": False}
         
-response = requests.request("GET", url, headers=headers, params=querystring)
+response = requests.get(url, headers=headers, params=querystring)
 a=response.json()
 Open_Charge_Map=pd.DataFrame(a)
 st.title("Hoi")
