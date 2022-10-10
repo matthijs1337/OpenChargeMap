@@ -45,7 +45,7 @@ for obj in combo_list:
   original_list.append(obj.provincie)
 
 result = st.selectbox('Selecteer de provincie', original_list)
-st.write(f'De gekozen plek {result}')
+st.write(f'De gekozen provincie {result}')
 
 for obj in combo_list:
    if (result == obj.provincie):
