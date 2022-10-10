@@ -33,13 +33,13 @@ class gemeente:
 
 url = "https://api.openchargemap.io/v3/poi"
 
-params = {"latitude": 52.0907374, "longitude": -5.1214201, "countrycode": "NL", 
+#params = {"latitude": 52.0907374, "longitude": -5.1214201, "countrycode": "NL", 
 
 "output": "json", "compact": True, "verbose": False}
 
 headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-a14f-16f0244ddd38"}
 
-response = requests.request("GET", url, headers=headers, params=params)
+response = requests.request("GET", url, headers=headers, params=(querystring,"output": "json", "compact": True, "verbose": False)
 
 json=response.json()
 Open_Charge_Map=pd.DataFrame(json)
