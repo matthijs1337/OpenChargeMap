@@ -49,9 +49,7 @@ st.write(f'De gekozen plek {result}')
 
 for obj in combo_list:
    if (result == obj.provincie):
-      querystring = {"latitude": obj.latitude,"longitude":obj.longitude,  "countrycode": "NL", "output": "json", "compact": True, "verbose": False}
-
-st.write(f'{querystring}')
+      querystring = {"latitude": obj.latitude,"longitude":obj.longitude, "output": "json", "compact": True, "verbose": False}
 
 ########################
 #url = "https://api.openchargemap.io/v3/poi"
