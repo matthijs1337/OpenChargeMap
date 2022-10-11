@@ -75,16 +75,22 @@ with tab1:
 #######DataCleaning
 api_data = Open_Charge_Map
 print(api_data.describe())
+print("----------------------------------------------------------------------------------------------")
 api_data
+print("----------------------------------------------------------------------------------------------")
 #import pandas as pd
 
 dfadress = pd.DataFrame(api_data['AddressInfo'].values.tolist())
+print("----------------------------------------------------------------------------------------------")
 dfadress
+print("----------------------------------------------------------------------------------------------")
 
 api_data.drop(['AddressInfo'], axis=1)
 
 mergedDf = dfadress.merge(api_data, how='right', left_index=True, right_index=True)
+print("----------------------------------------------------------------------------------------------")
 mergedDf
+print("----------------------------------------------------------------------------------------------")
 
 api_clean = mergedDf[['ID_y', 'NumberOfPoints', 'DateCreated', 'UsageCost', 'ID_x', 'Title', 'AddressLine1', 'Town'
                       , 'Postcode', 'CountryID', 'Latitude', 'Longitude']]
