@@ -86,9 +86,7 @@ api_data.drop(['AddressInfo'], axis=1)
 mergedDf = dfadress.merge(api_data, how='right', left_index=True, right_index=True)
 mergedDf
 
-api_clean = mergedDf[['ID_y', 'NumberOfPoints', 'DateCreated', 
-       'UsageCost', 'ID_x', 'Title', 'AddressLine1', 'Town', 'Postcode', 'CountryID',
-       'Latitude', 'Longitude']]
+api_clean = mergedDf[['ID_y', 'NumberOfPoints', 'DateCreated', 'UsageCost', 'ID_x', 'Title', 'AddressLine1', 'Town', 'Postcode', 'CountryID', 'Latitude', 'Longitude']]
 
 api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'Adress'})
 
