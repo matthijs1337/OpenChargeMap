@@ -1,0 +1,101 @@
+,ID_y,NumberOfPoints,DateCreated,UsageCost,ID_x,Title,AddressLine1,Town,Postcode,CountryID,Latitude,Longitude
+0,82229,2,2017-02-03T15:14:00Z,,82575,Strandhotel,Boulevard de Wielingen 49,Cadzand-Bad,4506 JK,159,51.377801,3.386208
+1,33157,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33503,"Parking Zeedijk / tegenover Abraham Calandweg 2, Westkapelle",Zeedijk,Westkapelle ( gemeente Veere ) ,4361 AH,159,51.52777,3.435234
+2,53656,1,2015-09-20T11:50:00Z,0.00 jaarabonnement,54002,Cavelot,Cavelot,Sluis,4506 GD,159,51.37529,3.39152
+3,32708,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33054,Boulevard de Wielingen 2-001,Boulevard de Wielingen 2-001,Sluis,4506 JH,159,51.38131,3.397671
+4,32621,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,32967,Sint Annastraat,Sint Annastraat,Sluis,4524 JA,159,51.309259,3.382141
+5,53688,1,2015-09-20T11:50:00Z,0.00 jaarabonnement,54034,Schelpweg 12,Schelpweg 12,Veere,4357 BP,159,51.56121,3.49126
+6,33070,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33416,Westkapelseweg,Westkapelseweg,Veere,4374 LN,159,51.503582,3.477792
+7,33265,1,2015-01-09T06:04:00Z,0.00 jaarabonnement,33611,Domburgseweg 3-119,Domburgseweg 3-119,Veere,4357 BA,159,51.56408,3.49818
+8,33069,1,2015-01-09T06:04:00Z,0.00 jaarabonnement,33415,Sloestraat 48,Sloestraat 48,Veere,4374 BR,159,51.50343,3.48409
+9,33078,1,2015-01-09T06:04:00Z,0.00 jaarabonnement,33424,Molenweg 58C,Molenweg 58C,Veere,4374 NP,159,51.5053088,3.48528220000003
+10,33245,1,2015-01-09T06:04:00Z,0.00 jaarabonnement,33591,Roosjesweg,Roosjesweg,Veere,4357 RL,159,51.55946,3.50118
+11,33267,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33613,Domburgseweg 13B,Domburgseweg 13B,Veere,4357 BA,159,51.565061,3.504488
+12,33269,1,2015-01-09T06:04:00Z,0.00 gratis,33615,Domburgseweg,Domburgseweg,Veere,4357 NN,159,51.566496,3.511451
+13,67902,2,2016-06-04T02:37:00Z,0.00 afhankelijk van pas,68248,Duinweg,Duinweg,Veere,4374 EJ,159,51.497742,3.496772
+14,33275,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33621,Domburgseweg,Domburgseweg,Veere,4356 NB,159,51.568276,3.52373
+15,33019,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33365,Valkenisseweg 55,Valkenisseweg 55,Veere,4373 RP,159,51.492229,3.505947
+16,33030,1,2015-01-09T06:03:00Z,0.00 gratis,33376,Valkenisseweg 52,Valkenisseweg 52,Veere,4373 RW,159,51.49467,3.51437
+17,97928,1,2018-01-21T17:01:00Z,,98274,Villa Magnolia,Oude Domburgseweg 20,Oostkapelle,4356 CC,159,51.568291,3.539339
+18,33331,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33677,Duinweg,Duinweg,Veere,4356 EW,159,51.579813,3.544072
+19,130095,2,2019-07-31T13:41:00Z,,130441,Beach car park,Walendijk 9,Groede,,159,51.4003321647688,3.4964692403269737
+20,50635,2,2015-07-22T09:53:00Z,0.00 afhankelijk van pas,50981,Aagtekerkseweg 2A,Aagtekerkseweg 2A,Veere,4356 RJ,159,51.562575,3.545727
+21,32942,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33288,Parking Verlengde Dishoekseweg 16,Verlengde Dishoekseweg 16,Veere,4371 NV,159,51.470038,3.522618
+22,128883,4,2019-07-03T12:41:00Z,"0,34€/kWh",129229,Landmetersweg,Landmetersweg,Veere,4356RE,159,51.5556883118205,3.55077481928902
+23,50614,2,2015-07-22T09:53:00Z,0.00 afhankelijk van pas,50960,Strandweg 7A,Strandweg 7A,Veere,4371 PK,159,51.478233,3.531502
+24,32921,2,2015-01-09T06:03:00Z,0.00 gratis,33267,Westduin Golden Tulip Hotel,1 Westduin,Koudekerke,4371 PE,159,51.464526844425,3.5291136884689
+25,32639,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,32985,Brouwerijstraat 9,Brouwerijstraat 9,Sluis,4501 CM,159,51.327883,3.490366
+26,194305,2,2022-07-24T18:20:00Z, € 0.36/kWh,194664,Boerderijcamping Zuiderhoeve,Dishoekseweg 28A,Koudekerke,4371 NH,159,51.47525081439318,3.541423812603057
+27,32995,1,2015-01-09T06:03:00Z,0.00 jaarabonnement,33341,Biggekerksestraat 71,Biggekerksestraat 71,Veere,4371 EX,159,51.4849357604981,3.54696249961853
+28,32726,1,2015-01-09T06:03:00Z,0.00 jaarabonnement,33072,Schoneveld 97,Schoneveld 97,Sluis,4511 HV,159,51.400989,3.534943
+29,32943,1,2015-01-09T06:03:00Z,0.00 jaarabonnement,33289,Lammerenburgweg 32,Lammerenburgweg 32,Vlissingen,4386 GX,159,51.46997,3.56407
+30,92451,2,2017-09-07T05:43:00Z,,92797,Amadore Hotel Restaurant Arion,Boulevard Bankert 266,Vlissingen,4382 AC,159,51.446344,3.564244
+31,73080,2,2016-11-06T13:18:00Z,,73426,"Paul Krugerstraat 9, Vlissingen",Paul Krugerstraat 9,Vlissingen,4382 MA,159,51.4492665,3.5725887999999486
+32,32868,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33214,Paul Krugerstraat 9a,Paul Krugerstraat 9a,Vlissingen,4382 MA,159,51.449188012827,3.5725709795952
+33,32721,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33067,Grote Kade 7,Grote Kade 7,Sluis,4511 AS,159,51.396187,3.558431
+34,33272,1,2015-01-09T06:04:00Z,0.00 gratis,33618,Vrouwenpolderseweg 42,Vrouwenpolderseweg 42,Veere,4354 SC,159,51.567426,3.612132
+35,92511,1,2017-09-07T05:54:00Z,,92857,Hotel/Restaurant Duinoord,Breezand 65,Vrouwenpolder,4354 NL,159,51.586036,3.621077
+36,32955,1,2015-01-09T06:03:00Z,0.00 jaarabonnement,33301,Bedrijfsweg 4,Bedrijfsweg 4,Vlissingen,4387 PD,159,51.47307,3.59347
+37,33360,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33706,N57 parallelweg,N57 parallelweg,Veere,4354 NG,159,51.584907,3.626979
+38,33038,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33384,Hof van Tange,Hof van Tange,Middelburg,4331 NK,159,51.496444,3.605495
+39,41591,1,2015-02-09T03:25:00Z,0.00 jaarabonnement,41937,Oosterhavenweg 14,Oosterhavenweg 14,Vlissingen,4382 NL,159,51.449326753365,3.6013805866241
+40,32998,1,2015-01-09T06:03:00Z,0.00 jaarabonnement,33344,Huybregt de Hasestraat 2,Huybregt de Hasestraat 2,Middelburg,4336 AJ,159,51.486540170353,3.6126472055912
+41,32842,1,2015-01-09T06:03:00Z,0.00 jaarabonnement,33188,Oosterhavenweg 26,Oosterhavenweg 26,Vlissingen,4382 NL,159,51.44406,3.60203
+42,33031,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33377,Kanaalweg,Kanaalweg,Middelburg,4331 JD,159,51.494874,3.616637
+43,62917,1,2016-03-03T12:29:00Z,0.00 jaarabonnement,63263,Johan Wilhem Thibautstraat 20A,Johan Wilhem Thibautstraat 20A,Middelburg,4336 EB,159,51.48656,3.61619
+44,32904,1,2015-01-09T06:03:00Z,0.00 gratis,33250,Deinsvlietweg,Deinsvlietweg,Vlissingen,4388 HN,159,51.459075672299,3.6085419440269
+45,32906,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33252,Renault garage Dijkwel / Ritthem,Marie Curieweg 5,Vlissingen,4389 WB,159,51.45918249851407,3.608755509262087
+46,33062,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33408,Rotterdamsekaai 1,Rotterdamsekaai 1,Middelburg,4331 GM,159,51.50141,3.620601
+47,33042,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33388,Kanaalweg,Kanaalweg,Middelburg,4337 PA,159,51.497345,3.624054
+48,33061,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33407,Oude Veerseweg 3,Oude Veerseweg 3,Middelburg,4332 SH,159,51.500856,3.628337
+49,32985,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33331,Mortiereboulevard 4,Mortiereboulevard 4,Middelburg,4336 RA,159,51.48045665192,3.6241344362497
+50,93895,5,2017-10-11T20:06:00Z,,94241,Restaurant De Kromme Watergang,Slijkplat 6,Hoofdplaat,,159,51.3773242,3.6029031000000487
+51,169959,8,2020-11-15T03:23:00Z,,170318,Parking banjaardstrand,Parking banjaardstrand,Noord-Beveland,4493RA,159,51.590606301790416,3.6629008999134385
+52,93988,2,2017-10-14T05:33:00Z,,94334,Amadore Hotel Restaurant de Kamperduinen,Patrijzenlaan 1,Kamperland,4493RA,159,51.590083,3.664783
+53,161875,8,2020-07-27T14:47:00Z,€0.25/kWh; andere tarieven voor oudere auto's,162232,Middelburg Supercharger,Paukenweg 3,Middelburg,4337 WH,159,51.480275,3.636485
+54,32982,1,2015-01-09T06:03:00Z,,33328,Van der Valk Hotel - Middelburg ,Paukenweg,Middelburg,4337WH,159,51.47981353173,3.6364759504795
+55,33051,1,2015-01-09T06:03:00Z,0.00 jaarabonnement,33397,Arnesteinweg 63,Arnesteinweg 63,Middelburg,4338 PD,159,51.49849,3.645114
+56,33010,1,2015-01-09T06:03:00Z,0.00 afhankelijk van pas,33356,Herculesweg 40A,Herculesweg 40A,Middelburg,4338 PL,159,51.49047,3.648796
+57,33206,1,2015-01-09T06:04:00Z,0.00 gratis,33552,"Markt 23 / Kerkstraat, Veere",Markt 23,Veere,4351 AG,159,51.54851131683097,3.6681465545616554
+58,33202,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33548,Parking Centrum Veere / Kanaalweg Westzijde,Kanaalweg Westzijde,Veere,4351 AW,159,51.545763,3.667953
+59,113706,2,2019-01-01T10:33:00Z,,114052,"Markt Parkeerplaats, Ijzendijke",Markt 20,Ijzendijke,4515 BD,159,51.3220072995403,3.61675304907385
+60,65462,1,2016-04-27T09:41:00Z,0.00 jaarabonnement,65808,J.J. Boeijesweg 45-0015,J.J. Boeijesweg 45-0015,Schouwen-Duiveland,4328 HA,159,51.71581,3.72372
+61,33563,1,2015-01-09T06:04:00Z,0.00 jaarabonnement,33909,Daleboutsweg 4 a Landal Greenparks,Daleboutsweg 4 a Landal Greenparks,Burgh-Haamstede,4328 PP,159,51.685832,3.728334
+62,33284,1,2015-01-09T06:04:00Z,0.00 gratis,33630,Veerweg 92,Veerweg 92,Noord-Beveland,4493 AT,159,51.570152,3.702668
+63,33292,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33638,Veerweg 46,Veerweg 46,Noord-Beveland,4493 AT,159,51.571695,3.703761
+64,33316,1,2015-01-09T06:04:00Z,0.00 jaarabonnement,33662,Ruiterplaatweg,Ruiterplaatweg,Noord-Beveland,4493 NH,159,51.5772481,3.71152770000003
+65,33626,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33972,'t Schoolplein,'t Schoolplein,Schouwen-Duiveland,4328 AK,159,51.698674,3.743747
+66,33382,1,2015-01-09T06:04:00Z,0.00 jaarabonnement,33728,Mariapolderseweg,Mariapolderseweg,Noord-Beveland,4493 PC,159,51.58917,3.72181
+67,50670,2,2015-07-22T09:53:00Z,0.00 afhankelijk van pas,51016,Lagezoom 23,Lagezoom 23,Schouwen-Duiveland,4325 CP,159,51.718347,3.766915
+68,33701,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,34047,Roelandsweg,Roelandsweg,Schouwen-Duiveland,4325 CS,159,51.728588,3.773541
+69,33362,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33708,Voorstraat 24,Voorstraat 24,Noord-Beveland,4491 EW,159,51.585332,3.746689
+70,62912,1,2016-03-03T12:29:00Z,0.00 jaarabonnement,63258,Estlandweg,Estlandweg,Borsele,4455 SV,159,51.47051,3.72249
+71,67903,1,2016-06-04T02:37:00Z,0.00 jaarabonnement,68249,Nieuwe Kraaijertsedijk 37,Nieuwe Kraaijertsedijk 37,Goes,4458 NK,159,51.50064,3.753
+72,33266,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33612,Burgemeester P Wissestraat 1,Burgemeester P Wissestraat 1,Noord-Beveland,4494 NS,159,51.564963,3.770113
+73,62925,2,2016-03-03T12:29:00Z,,63271,"Fastned Selnisse, Zeeland, A58 north side.",A58 99,Goes,4458 SN,159,51.49875,3.77227
+74,33722,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,34068,Dijkstraat 35,Dijkstraat 35,Schouwen-Duiveland,4322 AA,159,51.736793,3.839502
+75,54643,1,2015-10-09T06:18:00Z,0.00 jaarabonnement,54989,Dammenweg,Dammenweg,Goeree-Overflakkee,3253 MD,159,51.78494904,3.8700851
+76,62941,1,2016-03-03T12:29:00Z,0.00 jaarabonnement,63287,Veerweg,Veerweg,Goes,4471 BK,159,51.53417,3.81701
+77,32931,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33277,Steenloperstraat 16A,Steenloperstraat 16A,Borsele,4451 GA,159,51.466877,3.809491
+78,33409,1,2015-01-09T06:04:00Z,0.00 gratis,33755,Havelaarstraat 101,Havelaarstraat 101,Noord-Beveland,4486 BB,159,51.599039,3.851805
+79,33406,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33752,Havelaarstraat 90,Havelaarstraat 90,Noord-Beveland,4486 BE,159,51.598547,3.852446
+80,32959,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,33305,Kamilleplein 35,Kamilleplein 35,Borsele,4451 LB,159,51.473952,3.821391
+81,62956,1,2016-03-03T12:29:00Z,0.00 per laadbeurt,63302,1e Deltaweg,1e Deltaweg,Noord-Beveland,4485 PG,159,51.569694620697,3.8512766361237
+82,62862,1,2016-03-03T12:29:00Z,0.00 jaarabonnement,63208,Irisstraat 17,Irisstraat 17,Terneuzen,4542 EA,159,51.3116932,3.78072459999999
+83,53740,1,2015-09-20T11:50:00Z,0.00 jaarabonnement,54086,Westerweg,Westerweg,Goeree-Overflakkee,3253 LR,159,51.8243781,3.91432003
+84,63086,1,2016-03-03T12:29:00Z,0.00 jaarabonnement,63432,Kelderweg 41,Kelderweg 41,Goeree-Overflakkee,3253 TC,159,51.8090473,3.92034569999998
+85,33892,1,2015-01-09T06:04:00Z,0.00 jaarabonnement,34238,Oude Nieuwlandseweg 13b,Oude Nieuwlandseweg 13b,Goeree-Overflakkee,3253 BS,159,51.82357,3.92788
+86,62916,3,2016-03-03T12:29:00Z,,63262,"Fastned De Vliedberg, A58 Zuid, Zeeland",A58,Goes,4444 SL,159,51.48431,3.85084
+87,33694,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,34040,Markt 13,Markt 13,Schouwen-Duiveland,4318 AE,159,51.725616,3.912157
+88,70717,2,2016-08-06T15:12:00Z,,71063,Nieuwe Jachthaven Brouwershaven,Nieuwe Jachthaven ter hoogte nr 8,Brouwershaven,4318 AR,159,51.7275339704289,3.91334514564664
+89,7606,2,2011-10-24T17:50:00Z,Free,7503,Parking Nieuwe Rijksweg 3,Nieuwe Rijksweg 3,s-Heer Hendrikskinderen,4472 AA,159,51.504572,3.863056
+90,51302,1,2015-07-24T06:28:00Z,0.00 jaarabonnement,51648,Dorpstienden 4,Dorpstienden 4,Goeree-Overflakkee,3253 AS,159,51.8094957,3.9329122
+91,32637,2,2015-01-09T06:03:00Z,0.00 jaarabonnement,32983,Buitenhaven,Buitenhaven,Terneuzen,4542 PS,159,51.32668,3.814557
+92,50619,2,2015-07-22T09:53:00Z,,50965,"Van der Valk Hotel, Goes",Anthony Fokkerstraat,Goes,4462 ET,159,51.491967,3.866463
+93,32648,1,2015-01-09T06:03:00Z,0.00 jaarabonnement,32994,Binnenvaartweg,Binnenvaartweg,Terneuzen,4531 PD,159,51.334748,3.821503
+94,32638,1,2015-01-09T06:03:00Z,0.00 gratis,32984,Zeevaartweg 1,Zeevaartweg 1,Terneuzen,4531 PB,159,51.327352,3.819541
+95,67931,1,2016-06-04T02:37:00Z,0.00 jaarabonnement,68277,Poortkade 186,Poortkade 186,Schouwen-Duiveland,4302 VA,159,51.64278404,3.90655584
+96,54615,1,2015-10-09T06:18:00Z,0.00 jaarabonnement,54961,Scheldekade 46,Scheldekade 46,Terneuzen,4531 EH,159,51.33958,3.82634
+97,33508,2,2015-01-09T06:04:00Z,0.00 jaarabonnement,33854,Parking Gemeentehuis Zierikzee,Laan van St. Hilaire 2,Schouwen-Duiveland,4301 GS,159,51.653351,3.91282
+98,113701,1,2018-12-31T10:26:00Z,,114047,Agrisneltank gas station,Stationsweg 33,Terneuzen,4538AD,159,51.3310089,3.8248858
+99,67936,1,2016-06-04T02:37:00Z,0.00 jaarabonnement,68282,Balie,Balie,Schouwen-Duiveland,4301 GZ,159,51.64994755,3.914101
