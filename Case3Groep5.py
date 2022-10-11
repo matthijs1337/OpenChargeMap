@@ -59,11 +59,11 @@ for obj in combo_list:
 
 st.write(f'{querystring}')
 
-response = requests.request("GET", url, headers=headers, params=querystring)
-print(response.text)
-tekst = response.json()
-Open_Charge_Map=pd.DataFrame(tekst)
+response = requests.get(url, headers=headers, params=querystring)
+json=response.json()
+Open_Charge_Map=pd.DataFrame(json)
 st.title("Hoi")
+st.dataframe(Open_Charge_Map)
 
 
 
