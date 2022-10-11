@@ -71,10 +71,74 @@ with tab1:
     response = requests.request("GET", url, headers=headers, params=querystring)
     tekst = response.json()
     Open_Charge_Map=pd.DataFrame(tekst)
-    
-   
+        
+#######DataCleaning
+api_data = Open_Charge_Map
+dfadress = pd.DataFrame(api_data['AddressInfo'].values.tolist())
+api_data.drop(['AddressInfo'], axis=1)
+
+mergedDf = dfadress.merge(api_data, how='right', left_index=True, right_index=True)
+ api_clean= mergedDf[['ID_y', 'NumberOfPoints',
+       'DateCreated', 'UsageCost', 'ID_x', 'Title', 'AddressLine1', 'Town', 'Postcode', 'CountryID',
+       'Latitude', 'Longitude'
+       ]]
+api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'Adress'})
+api_clean["Town"].value_counts()
+def opsplitsen_postcode(value):
+    begin = value[0:4]
+
+    if value[5] == '-':
+        einde = value[7:11]
+        provincie = value[12:]
+    else:
+        einde = begin
+        provincie = value[5:]
+
+    #rare waardes eruit halen
+    if provincie == 'Utrecht\xa0voorheen\xa0Zuid-Holland':
+        provincie = 'Utrecht'
 
 
+    return [int(begin), int(einde), provincie] 
+
+def postcode_nummers(value):
+    value = str(value)
+
+    if len(value) > 4:
+        return int(value[0:4])
+    else:
+        return 1001
+      
+postcode_nummers("1394 Noord-Holland")
+
+#importeren
+postcode_provincie = pd.read_excel('postcode_provincie.xls',index_col=None)
+
+#opsplitsen
+postcode_provincie['list'] = postcode_provincie.apply(lambda x: opsplitsen_postcode(x['aanelkaar']), axis = 1)
+df_data = pd.DataFrame(postcode_provincie['list'].values.tolist(), index=postcode_provincie.index)
+postcode_provincie = pd.concat([postcode_provincie, df_data], axis=1).drop('list', axis=1)
+postcode_provincie.columns = ['orgineel', "begin", 'einde', 'provincie']
+postcode_provincie.head()
+
+postcode = []
+provincie = []
+
+row = 0
+for i, row in postcode_provincie.iterrows():
+    lijst = (row.einde - row.begin+1)* [row.provincie]
+    lijst2 = [*range(row.begin, row.einde+1)]
+    provincie += lijst
+    postcode += lijst2
+
+print(len(postcode))
+print(len(provincie))
+
+dict = {'postcode': postcode, 'provincie': provincie}  
+df = pd.DataFrame(dict)
+df
+
+ st.dataframe(Open_Charge_Map)
 
 #Laadpaaldata
 with tab2:
