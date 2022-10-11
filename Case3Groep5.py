@@ -74,6 +74,8 @@ with tab1:
         
 #######DataCleaning
 api_data = Open_Charge_Map
+print(api_data.describe())
+
 dfadress = pd.DataFrame(api_data['AddressInfo'].values.tolist())
 api_data.drop(['AddressInfo'], axis=1)
 
@@ -83,7 +85,11 @@ api_clean= mergedDf[['ID_y', 'NumberOfPoints',
        'Latitude', 'Longitude'
        ]]
 api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'Adress'})
+
+#Aantal laadpalen
+#Per gemeente
 api_clean["Town"].value_counts()
+
 def opsplitsen_postcode(value):
     begin = value[0:4]
 
@@ -94,7 +100,10 @@ def opsplitsen_postcode(value):
         einde = begin
         provincie = value[5:]
 
-    #rare waardes eruit halen
+#Aantal laadpalen
+#Per provincie
+
+#rare waardes eruit halen
     if provincie == 'Utrecht\xa0voorheen\xa0Zuid-Holland':
         provincie = 'Utrecht'
 
@@ -110,6 +119,9 @@ def postcode_nummers(value):
         return 1001
       
 postcode_nummers("1394 Noord-Holland")
+
+postcode_provincie = pd.read_excel('postcode_provincie.xls',index_col=None)
+postcode_provincie.head()
 
 #importeren
 postcode_provincie = pd.read_excel('postcode_provincie.xls',index_col=None)
@@ -137,6 +149,41 @@ print(len(provincie))
 dict = {'postcode': postcode, 'provincie': provincie}  
 df = pd.DataFrame(dict)
 df
+
+postcode_provincie['provincie'].unique() #Alle rare waardes zijn eruit gehaald
+
+#df5
+df5 = pd.read_csv("jsonwoonplaatsen.csv")
+df5.head()
+
+df5["Provincie"].value_counts()
+
+Provincie = df5[['Plaats', 'Provincie']]
+Provincie.head()
+
+#df6
+df6 = api_clean.merge(Provincie, how='left', left_on = 'Town', right_on = 'Plaats')
+df6[["Town","Plaats","Provincie"]]
+
+#Visualiseer data op een kaart
+import folium
+from folium.plugins import MarkerCluster
+
+
+
+m = folium.Map(location=[52.377956, 4.897070], zoom_start=7)
+
+marker_cluster = MarkerCluster().add_to(m)
+
+for i, x in api_clean.iterrows():
+    folium.Marker(location=[x['Latitude'], x['Longitude']],
+                        popup="<strong>" + x['Title'] +"<strong>",
+                        tooltip='Klik hier om de popup te zien',
+                        fill_opacity=0.7,
+                        fill= True
+                        ).add_to(marker_cluster)
+
+m
 
 st.dataframe(clean_api)
 
