@@ -72,7 +72,7 @@ with tab1:
     tekst = response.json()
     Open_Charge_Map=pd.DataFrame(tekst)
     
-    st.dataframe(Open_Charge_Map)
+   
 
 
 
