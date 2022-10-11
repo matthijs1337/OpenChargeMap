@@ -51,6 +51,19 @@ for obj in combo_list:
    if (result == obj.provincie):
       querystring = {"latitude": obj.latitude,"longitude":obj.longitude, "output": "json", "compact": True, "verbose": False}
 
+
+
+###### response
+
+st.write(f'{querystring}')
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+print(response.text)
+tekst = response.json()
+Open_Charge_Map=pd.DataFrame(tekst)
+st.title("Hoi")
+st.dataframe(Open_Charge_Map)
+
 ### data cleaning
 api_data = Open_Charge_Map
 
@@ -69,17 +82,4 @@ mergedDf
 api_clean
 
 api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'Adress'})
-
-
-###### response
-
-st.write(f'{querystring}')
-
-response = requests.request("GET", url, headers=headers, params=querystring)
-print(response.text)
-tekst = response.json()
-Open_Charge_Map=pd.DataFrame(tekst)
-st.title("Hoi")
-st.dataframe(Open_Charge_Map)
-
 
