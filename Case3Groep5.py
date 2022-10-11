@@ -138,7 +138,7 @@ dict = {'postcode': postcode, 'provincie': provincie}
 df = pd.DataFrame(dict)
 df
 
- st.dataframe(Open_Charge_Map)
+st.dataframe(clean_api)
 
 #Laadpaaldata
 with tab2:
