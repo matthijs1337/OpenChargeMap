@@ -19,7 +19,7 @@ pio.renderers.default = 'browser'
 
 
 class Provincie:
-  def __init__ (self, provincie, longitude, latitude):
+  def __init__ (self, provincie, latitude, longitude):
     self.provincie = provincie
     self.longitude = longitude
     self.latitude = latitude
@@ -63,7 +63,7 @@ with tab1:
     
     for obj in combo_list:
        if (result == obj.provincie):
-          querystring = {"latitude": obj.latitude,"longitude": obj.longitude, countrycode: "NL", "output": "json", "compact": True, "verbose": False}
+          querystring = {"latitude": obj.latitude, "longitude": obj.longitude, "countrycode": 'NL', "output": "json", "compact": True, "verbose": False}
     
     
     st.write(f'{querystring}')
