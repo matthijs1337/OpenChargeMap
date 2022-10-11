@@ -10,8 +10,6 @@ import pandas as pd
 import requests
 import streamlit as st
 
-Open_Charge_Map=pd.DataFrame(tekst)
-st.dataframe(Open_Charge_Map)
 
 class Provincie:
   def __init__ (self, provincie, longitude, latitude):
@@ -27,24 +25,6 @@ url = "https://api.openchargemap.io/v3/poi"
 
 headers = {"Content-Type": "application/json", "X-API-Key": "fa5db543-c4ac-4809-8455-9a20a41a021e"}
 
-### data cleaning
-api_data = Open_Charge_Map
-
-dfadress = pd.DataFrame(api_data['AddressInfo'].values.tolist())
-dfadress
-
-api_data.drop(['AddressInfo'], axis=1)
-
-mergedDf = dfadress.merge(api_data, how='right', left_index=True, right_index=True)
-mergedDf
-
-api_clean= mergedDf[['ID_y', 'NumberOfPoints',
-       'DateCreated', 'UsageCost', 'ID_x', 'Title', 'AddressLine1', 'Town', 'Postcode', 'CountryID',
-       'Latitude', 'Longitude'
-       ]]
-api_clean
-
-api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'Adress'})
 
 
 #dropdownlist
