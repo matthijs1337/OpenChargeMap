@@ -51,18 +51,27 @@ for obj in combo_list:
    if (result == obj.provincie):
       querystring = {"latitude": obj.latitude,"longitude":obj.longitude, "output": "json", "compact": True, "verbose": False}
 
-########################
-#url = "https://api.openchargemap.io/v3/poi"
+### data cleaning
+api_data = Open_Charge_Map
 
-#params = {"latitude": 52.0907374, "longitude": -5.1214201, "countrycode": "NL", "output": "json", "compact": True, "verbose": False}
+dfadress = pd.DataFrame(api_data['AddressInfo'].values.tolist())
+dfadress
 
-#headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-a14f-16f0244ddd38"}
+api_data.drop(['AddressInfo'], axis=1)
 
-#response = requests.request("GET", url, headers=headers, params=params)
+mergedDf = dfadress.merge(api_data, how='right', left_index=True, right_index=True)
+mergedDf
+
+ api_clean= mergedDf[['ID_y', 'NumberOfPoints',
+       'DateCreated', 'UsageCost', 'ID_x', 'Title', 'AddressLine1', 'Town', 'Postcode', 'CountryID',
+       'Latitude', 'Longitude'
+       ]]
+api_clean
+
+api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'Adress'})
 
 
-#############################
-
+###### response
 
 st.write(f'{querystring}')
 
