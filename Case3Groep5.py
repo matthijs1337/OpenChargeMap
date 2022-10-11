@@ -75,22 +75,12 @@ with tab1:
 #######DataCleaning
 api_data = Open_Charge_Map
 st.write(f'{api_data.describe()}')
-st.write(f'-----------------------------------Api Data --------------------------------------------------')
-api_data
-st.write(f'----------------------------------------------------------------------------------------------')
-#import pandas as pd
 
 dfadress = pd.DataFrame(api_data['AddressInfo'].values.tolist())
-st.write(f'----------------------------------- dfadress -------------------------------------------------')
-dfadress
-st.write(f'----------------------------------------------------------------------------------------------')
 
 api_data.drop(['AddressInfo'], axis=1)
 
 mergedDf = dfadress.merge(api_data, how='right', left_index=True, right_index=True)
-st.write(f'----------------------------------- mergedDf -------------------------------------------------')
-mergedDf
-st.write(f'----------------------------------------------------------------------------------------------')
 
 api_clean = mergedDf[['ID_y', 'NumberOfPoints', 'DateCreated', 'UsageCost', 'ID_x', 'Title', 'AddressLine1', 'Town'
                       , 'Postcode', 'CountryID', 'Latitude', 'Longitude']]
@@ -159,7 +149,6 @@ print(len(provincie))
 
 dict = {'postcode': postcode, 'provincie': provincie}  
 df = pd.DataFrame(dict)
-df
 
 postcode_provincie['provincie'].unique() #Alle rare waardes zijn eruit gehaald
 
@@ -193,8 +182,6 @@ for i, x in api_clean.iterrows():
                         fill_opacity=0.7,
                         fill= True
                         ).add_to(marker_cluster)
-
-m
 
 st.dataframe(clean_api)
 
