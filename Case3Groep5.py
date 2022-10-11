@@ -75,7 +75,7 @@ with tab1:
 #######DataCleaning
 api_data = Open_Charge_Map
 print(api_data.describe())
-
+api_data
 #import pandas as pd
 
 dfadress = pd.DataFrame(api_data['AddressInfo'].values.tolist())
