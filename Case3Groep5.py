@@ -10,6 +10,9 @@ import pandas as pd
 import requests
 import streamlit as st
 
+Open_Charge_Map=pd.DataFrame(tekst)
+st.dataframe(Open_Charge_Map)
+
 class Provincie:
   def __init__ (self, provincie, longitude, latitude):
     self.provincie = provincie
@@ -81,7 +84,6 @@ print(response.text)
 tekst = response.json()
 Open_Charge_Map=pd.DataFrame(tekst)
 st.title("Hoi")
-st.dataframe(Open_Charge_Map)
 
 
 
