@@ -75,7 +75,7 @@ api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'A
 
 m = folium.Map(location=[52.377956, 4.897070], zoom_start=7)
 
-marker_cluster = MarkerCluster().add_to(m)
+#marker_cluster = MarkerCluster().add_to(m)
 
 for i, x in api_clean.iterrows():
     folium.Marker(location=[x['Latitude'], x['Longitude']],
@@ -83,28 +83,7 @@ for i, x in api_clean.iterrows():
                         tooltip='Klik hier om het adres te zien',
                         fill_opacity=0.7,
                         fill= True
-                        ).add_to(marker_cluster)
+                        ).add_to(m)
 
 st_data = st_folium(m. width = 725)
-
-
-# In[35]:
-
-logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
-
-a = folium.Map(location=[52.377956, 4.897070], zoom_start=7)
-
-marker_cluster2 = MarkerCluster().add_to(a)
-
-for i, x in api_clean.iterrows():
-    folium.Marker(location=[x['Latitude'], x['Longitude']],
-                        popup="<strong>" + x['Title'] +"<strong>",
-                        tooltip='Klik hier om het adres te zien',
-                        fill_opacity=0.7,
-                        fill= True,
-                        icon= folium.features.CustomIcon(logo_url,\
-                                  icon_size=(50, 50))
-                        ).add_to(marker_cluster2)
-
-a
 
