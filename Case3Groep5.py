@@ -107,7 +107,7 @@ for obj in combo_list:
       querystring = {"latitude": obj.latitude,"longitude":obj.longitude}
 
 
-m = folium.Map(location=[querystring], zoom_start=7)
+m = folium.Map(location=(querystring), zoom_start=7)
 
 marker_cluster = MarkerCluster().add_to(m)
 
