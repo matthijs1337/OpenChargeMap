@@ -99,7 +99,7 @@ combo_list.append(Provincie("Utrecht",52.1195, 5.1944))
 for obj in combo_list:
     original_list.append(obj.provincie)
     
-result = st.selectbox('Selecteer de provincie', original_list)
+result = st.sidebar.selectbox('Selecteer de provincie', original_list)
 st.write(f'De gekozen provincie {result}')
    
 for obj in combo_list:
