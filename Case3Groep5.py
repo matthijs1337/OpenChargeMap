@@ -91,9 +91,9 @@ m
 
 logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
 
-m = folium.Map(location=[52.377956, 4.897070], zoom_start=7)
+a = folium.Map(location=[52.377956, 4.897070], zoom_start=7)
 
-marker_cluster = MarkerCluster().add_to(m)
+marker_cluster2 = MarkerCluster().add_to(a)
 
 for i, x in api_clean.iterrows():
     folium.Marker(location=[x['Latitude'], x['Longitude']],
@@ -103,7 +103,7 @@ for i, x in api_clean.iterrows():
                         fill= True,
                         icon= folium.features.CustomIcon(logo_url,\
                                   icon_size=(50, 50))
-                        ).add_to(marker_cluster)
+                        ).add_to(marker_cluster2)
 
-m
+a
 
