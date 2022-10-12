@@ -85,7 +85,7 @@ for i, x in api_clean.iterrows():
                         fill= True
                         ).add_to(marker_cluster)
 
-st_data = st_folium(m. width = 725)
+st_data = st_folium(m, width = 725)
 
 #logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
 
