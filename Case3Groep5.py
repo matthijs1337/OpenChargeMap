@@ -108,7 +108,7 @@ for obj in combo_list:
       
 st.write(f'QueryString {querystring}')
 
-locationx=[querystring]
+locationx=querystring
 m = folium.Map(location=locationx, zoom_start=7)
 
 marker_cluster = MarkerCluster().add_to(m)
