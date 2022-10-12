@@ -14,8 +14,7 @@ import folium
 from folium.plugins import MarkerCluster
 import streamlit as st
 from streamlit_folium import st_folium
-from ipywidgets
-import ipywidgets as widgets
+
 
 
 #klas
@@ -112,36 +111,12 @@ for obj in combo_list:
 st.write(f'QueryString {querystring}')
 
 #slider voor zoom
-slider = widgets.FloatSlider(
-    value=7.5,
-    min=6,
-    max=9,
-    step=0.1,
-    description='Test:',
-    disabled=False,
-    continuous_update=False,
-    orientation='vertical',
-    readout=True,
-    readout_format='.1f',
-)
 
 
-#locationx=[53,4]
-#m = folium.Map(location=querystring, zoom_start=8)
 
-#marker_cluster = MarkerCluster().add_to(m)
 
-#for i, x in api_clean.iterrows():
-    #folium.Marker(location=[x['Latitude'], x['Longitude']],
-                        #popup="<strong>" + x['Title'] +"<strong>",
-                        #tooltip='Klik hier om het adres te zien',
-                        #fill_opacity=0.7,
-                        #fill= True
-                        #).add_to(marker_cluster)
 
-#st_data = st_folium(m, width = 725)
-
-#########tweede foliummap
+######### foliummap
 logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
 
 a = folium.Map(location=querystring, zoom_start=7)
