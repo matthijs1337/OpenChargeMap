@@ -104,10 +104,10 @@ st.write(f'De gekozen provincie {result}')
    
 for obj in combo_list:
     if (result == obj.provincie):
-      querystring = {obj.latitude,obj.longitude}
+      querystring = {obj.latitude, obj.longitude}
       
 st.write(f'QueryString {querystring}')
-m = folium.Map(location=(querystring), zoom_start=7)
+m = folium.Map(location=querystring, zoom_start=7)
 
 marker_cluster = MarkerCluster().add_to(m)
 
