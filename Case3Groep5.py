@@ -96,7 +96,7 @@ combo_list.append(Provincie("Friesland", 53.164164, 5.781754))
 combo_list.append(Provincie("Gelderland", 52.04515, 5.871823))
 combo_list.append(Provincie("Utrecht",52.1195, 5.1944))
     
-  for obj in combo_list:
+for obj in combo_list:
     original_list.append(obj.provincie)
     
 result = st.selectbox('Selecteer de provincie', original_list)
