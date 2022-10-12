@@ -81,8 +81,9 @@ api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'A
 
 # In[14]:
 #dropdownlijst
-    combo_list=[]
-    original_list = []
+
+combo_list=[]
+original_list = []
     combo_list.append(Provincie("Noord-Holland", 52.375029, 4.630962))
     combo_list.append(Provincie("Zuid-Holland", 52.090737, 5.121420))
     combo_list.append(Provincie("Zeeland", 51.494030, 3.849681))
