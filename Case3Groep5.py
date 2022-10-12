@@ -109,10 +109,10 @@ for obj in combo_list:
 st.write(f'QueryString {querystring}')
 
 #slider voor zoom
-    cols1,_ = st.columns((15,3)) # To make it narrower
-    slider = cols1.slider(5,6,7,8,9)
-    slider_begin = slider[0]
-    slider_einde =  slider[1] 
+cols1,_ = st.columns((15,3)) # To make it narrower
+slider = cols1.slider(5,6,7,8,9)
+slider_begin = slider[0]
+slider_einde =  slider[1] 
 
 
 #locationx=[53,4]
