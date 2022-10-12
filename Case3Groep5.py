@@ -124,33 +124,33 @@ postcode_nummers("1394 Noord-Holland")
 
 
 #importeren
-postcode_provincie= pd.read_excel("postcode_provincie.xls", index_col=None)
-postcode_provincie.head()
+#postcode_provincie= pd.read_excel("postcode_provincie.xls", index_col=None)
+#postcode_provincie.head()
 
 #opsplitsen
-postcode_provincie['list'] = postcode_provincie.apply(lambda x: opsplitsen_postcode(x['aanelkaar']), axis = 1)
-df_data = pd.DataFrame(postcode_provincie['list'].values.tolist(), index=postcode_provincie.index)
-postcode_provincie = pd.concat([postcode_provincie, df_data], axis=1).drop('list', axis=1)
-postcode_provincie.columns = ['orgineel', "begin", 'einde', 'provincie']
-postcode_provincie.head()
+#postcode_provincie['list'] = postcode_provincie.apply(lambda x: opsplitsen_postcode(x['aanelkaar']), axis = 1)
+#df_data = pd.DataFrame(postcode_provincie['list'].values.tolist(), index=postcode_provincie.index)
+#postcode_provincie = pd.concat([postcode_provincie, df_data], axis=1).drop('list', axis=1)
+#postcode_provincie.columns = ['orgineel', "begin", 'einde', 'provincie']
+#postcode_provincie.head()
 
-postcode = []
-provincie = []
+#postcode = []
+#provincie = []
 
-row = 0
-for i, row in postcode_provincie.iterrows():
-    lijst = (row.einde - row.begin+1)* [row.provincie]
-    lijst2 = [*range(row.begin, row.einde+1)]
-    provincie += lijst
-    postcode += lijst2
+#row = 0
+#for i, row in postcode_provincie.iterrows():
+    #lijst = (row.einde - row.begin+1)* [row.provincie]
+    #lijst2 = [*range(row.begin, row.einde+1)]
+    #provincie += lijst
+    #postcode += lijst2
 
-print(len(postcode))
-print(len(provincie))
+#print(len(postcode))
+#print(len(provincie))
 
-dict = {'postcode': postcode, 'provincie': provincie}  
-df = pd.DataFrame(dict)
+#dict = {'postcode': postcode, 'provincie': provincie}  
+#df = pd.DataFrame(dict)
 
-postcode_provincie['provincie'].unique() #Alle rare waardes zijn eruit gehaald
+#postcode_provincie['provincie'].unique() #Alle rare waardes zijn eruit gehaald
 
 #df5
 df5 = pd.read_csv("jsonwoonplaatsen.csv")
