@@ -101,7 +101,7 @@ for obj in combo_list:
     
 result = st.selectbox('Selecteer de provincie', original_list)
 st.write(f'De gekozen provincie {result}')
-    
+   
   for obj in combo_list:
     if (result == obj.provincie):
       querystring = {"latitude": obj.latitude,"longitude":obj.longitude}
