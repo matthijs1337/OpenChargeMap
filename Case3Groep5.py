@@ -14,7 +14,6 @@ import folium
 from folium.plugins import MarkerCluster
 import streamlit as st
 from streamlit_folium import st_folium
-from tkinter import *
 
 
 
@@ -112,18 +111,6 @@ for obj in combo_list:
 st.write(f'QueryString {querystring}')
 
 #slider voor zoom
-def slider_changed(event):  
-    print(slider.get())
-
-slider = ttk.Scale(
-    root,
-    from_=5,
-    to=10,
-    orient='horizontal',
-    variable=current_value
-    command=slider_changed
-)
-
 
 
 
