@@ -96,15 +96,15 @@ combo_list.append(Provincie("Friesland", 53.164164, 5.781754))
 combo_list.append(Provincie("Gelderland", 52.04515, 5.871823))
 combo_list.append(Provincie("Utrecht",52.1195, 5.1944))
     
-    for obj in combo_list:
-      original_list.append(obj.provincie)
+  for obj in combo_list:
+    original_list.append(obj.provincie)
     
-    result = st.selectbox('Selecteer de provincie', original_list)
-    st.write(f'De gekozen provincie {result}')
+result = st.selectbox('Selecteer de provincie', original_list)
+st.write(f'De gekozen provincie {result}')
     
-    for obj in combo_list:
-       if (result == obj.provincie):
-          querystring = {"latitude": obj.latitude,"longitude":obj.longitude}
+  for obj in combo_list:
+    if (result == obj.provincie):
+      querystring = {"latitude": obj.latitude,"longitude":obj.longitude}
 
 
 m = folium.Map(location=[querystring], zoom_start=7)
