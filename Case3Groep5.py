@@ -104,7 +104,7 @@ st.write(f'De gekozen provincie {result}')
    
 for obj in combo_list:
     if (result == obj.provincie):
-      querystring = [obj.latitude, obj.longitude]
+      querystring = [obj.longitude, obj.latitude]
       
 st.write(f'QueryString {querystring}')
 
