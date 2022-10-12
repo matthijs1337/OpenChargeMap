@@ -121,11 +121,11 @@ def postcode_nummers(value):
       
 postcode_nummers("1394 Noord-Holland")
 
-postcode_provincie = pd.read_excel('postcode_provincie.xls',index_col=None)
-postcode_provincie.head()
+
 
 #importeren
-postcode_provincie = pd.read_excel('postcode_provincie.xls',index_col=None)
+postcode_provincie= pd.read_excel("postcode_provincie.xls", index_col=None)
+postcode_provincie.head()
 
 #opsplitsen
 postcode_provincie['list'] = postcode_provincie.apply(lambda x: opsplitsen_postcode(x['aanelkaar']), axis = 1)
