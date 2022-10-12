@@ -45,13 +45,13 @@ response = requests.request("GET", url, headers=headers, params=params)
 json=response.json()
 Open_Charge_Map=pd.DataFrame(json)
 api_data=Open_Charge_Map
-api_data
+#api_data
 
 
 # In[4]:
 
 dfadress = pd.DataFrame(api_data['AddressInfo'].values.tolist())
-dfadress
+#dfadress
 
 
 # In[5]:
@@ -60,7 +60,7 @@ dfadress
 api_data.drop(['AddressInfo'], axis=1)
 
 mergedDf = dfadress.merge(api_data, how='right', left_index=True, right_index=True)
-mergedDf
+#mergedDf
 
 
 # In[6]:
@@ -70,7 +70,7 @@ api_clean= mergedDf[['ID_y', 'NumberOfPoints',
        'DateCreated', 'UsageCost', 'ID_x', 'Title', 'AddressLine1', 'Town', 'Postcode', 'CountryID',
        'Latitude', 'Longitude'
        ]]
-api_clean
+#api_clean
 
 
 # In[7]:
@@ -109,38 +109,38 @@ for obj in combo_list:
 st.write(f'QueryString {querystring}')
 
 #locationx=[53,4]
-m = folium.Map(location=querystring, zoom_start=8)
+#m = folium.Map(location=querystring, zoom_start=8)
 
-marker_cluster = MarkerCluster().add_to(m)
+#marker_cluster = MarkerCluster().add_to(m)
+
+#for i, x in api_clean.iterrows():
+    #folium.Marker(location=[x['Latitude'], x['Longitude']],
+                        #popup="<strong>" + x['Title'] +"<strong>",
+                        #tooltip='Klik hier om het adres te zien',
+                        #fill_opacity=0.7,
+                        #fill= True
+                        #).add_to(marker_cluster)
+
+#st_data = st_folium(m, width = 725)
+
+#########tweede foliummap
+logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
+
+a = folium.Map(location=querystring, zoom_start=7)
+
+marker_cluster2 = MarkerCluster().add_to(a)
 
 for i, x in api_clean.iterrows():
     folium.Marker(location=[x['Latitude'], x['Longitude']],
-                        popup="<strong>" + x['Title'] +"<strong>",
-                        tooltip='Klik hier om het adres te zien',
-                        fill_opacity=0.7,
-                        fill= True
-                        ).add_to(marker_cluster)
+                       popup="<strong>" + x['Title'] +"<strong>",
+                       tooltip='Klik hier om het adres te zien',
+                       fill_opacity=0.7,
+                       fill= True,
+                       icon= folium.features.CustomIcon(logo_url,\
+                                  icon_size=(50, 50))
+                       ).add_to(marker_cluster2)
 
-st_data = st_folium(m, width = 725)
-
-#########tweede foliummap
-#logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
-
-#a = folium.Map(location=querystring, zoom_start=7)
-
-#marker_cluster2 = MarkerCluster().add_to(a)
-
-#for i, x in api_clean.iterrows():
-  #  folium.Marker(location=[x['Latitude'], x['Longitude']],
-                     #  popup="<strong>" + x['Title'] +"<strong>",
-                      # tooltip='Klik hier om het adres te zien',
-                      # fill_opacity=0.7,
-                      # fill= True,
-                      # icon= folium.features.CustomIcon(logo_url,\
-                                  #icon_size=(50, 50))
-                      # ).add_to(marker_cluster2)
-
-#st_data = st_folium(a, width = 725)
+st_data = st_folium(a, width = 725)
 
 
        
