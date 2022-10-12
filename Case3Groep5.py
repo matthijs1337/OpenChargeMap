@@ -13,6 +13,7 @@ import json
 import folium
 from folium.plugins import MarkerCluster
 import streamlit as st
+from streamlit_folium import st_folium
 
 
 # In[2]:
@@ -84,7 +85,7 @@ for i, x in api_clean.iterrows():
                         fill= True
                         ).add_to(marker_cluster)
 
-m
+st_data = st_folium(m. width = 725)
 
 
 # In[35]:
