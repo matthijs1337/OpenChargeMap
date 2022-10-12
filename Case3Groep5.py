@@ -83,8 +83,8 @@ api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'A
 #dropdownlijst
 combo_list=[]
 original_list = []
-combo_list.append(Provincie("Noord-Holland", 52.375029, 4.630962))
-combo_list.append(Provincie("Zuid-Holland", 52.090737, 5.121420))
+combo_list.append(Provincie("Noord-Holland", 52.375029, 4.630962, zoom_start=8))
+combo_list.append(Provincie("Zuid-Holland", 52.090737, 5.121420, zoom_start=4))
 combo_list.append(Provincie("Zeeland", 51.494030, 3.849681))
 combo_list.append(Provincie("Noord-Brabant", 51.4826537, 5.232168))
 combo_list.append(Provincie("Flevoland", 52.527978, 5.595350))
@@ -109,7 +109,7 @@ for obj in combo_list:
 st.write(f'QueryString {querystring}')
 
 #locationx=[53,4]
-m = folium.Map(location=querystring, zoom_start=9)
+m = folium.Map(location=querystring)
 
 marker_cluster = MarkerCluster().add_to(m)
 
@@ -126,7 +126,7 @@ st_data = st_folium(m, width = 725)
 #########tweede foliummap
 #logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
 
-#a = folium.Map(location=[52.377956, 4.897070], zoom_start=7)
+#a = folium.Map(location=querystring, zoom_start=7)
 
 #marker_cluster2 = MarkerCluster().add_to(a)
 
