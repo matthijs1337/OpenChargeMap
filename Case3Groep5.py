@@ -14,7 +14,6 @@ import folium
 from folium.plugins import MarkerCluster
 import streamlit as st
 from streamlit_folium import st_folium
-
 import ipywidgets as widgets
 
 
@@ -112,10 +111,10 @@ for obj in combo_list:
 st.write(f'QueryString {querystring}')
 
 #slider voor zoom
-widgets.FloatSlider(
+slider = widgets.FloatSlider(
     value=7.5,
-    min=0,
-    max=10.0,
+    min=6,
+    max=9,
     step=0.1,
     description='Test:',
     disabled=False,
