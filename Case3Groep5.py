@@ -40,9 +40,6 @@ api_data
 
 # In[4]:
 
-
-import pandas as pd
-
 dfadress = pd.DataFrame(api_data['AddressInfo'].values.tolist())
 dfadress
 
@@ -91,7 +88,6 @@ m
 
 
 # In[35]:
-
 
 logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
 
