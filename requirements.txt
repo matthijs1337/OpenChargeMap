@@ -3,3 +3,4 @@ sodapy==2.2.0
 statsmodels==0.13.2
 folium==0.12.1
 streamlit-folium==0.6.15
+ipywidgets==1.16.0
