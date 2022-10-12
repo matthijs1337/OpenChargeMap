@@ -21,6 +21,7 @@ class Provincie:
     self.provincie = provincie
     self.longitude = longitude
     self.latitude = latitude
+    self.zoom = zoom_start
     
   def show_all(self):
     print (self.provincie, self.longitude, self.latitude)
