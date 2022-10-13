@@ -142,7 +142,7 @@ def switch(result):
 ######### foliummap
 logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
 
-a = folium.Map(location=querystring, zoom_start=switch(result), legend_name="aantal laadpalen")
+a = folium.Map(location=querystring, zoom_start=switch(result), legend=True, legend_name="aantal laadpalen")
 
 marker_cluster2 = MarkerCluster().add_to(a)
 
