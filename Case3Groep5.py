@@ -117,7 +117,7 @@ st.write(f'QueryString {querystring}')
 ######### foliummap
 logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
 
-a = folium.Map(location=querystring, zoom_start=7)
+a = folium.Map(location=querystring, zoom_start=7, prefer_canvas=True)
 
 marker_cluster2 = MarkerCluster().add_to(a)
 
