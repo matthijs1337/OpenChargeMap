@@ -85,7 +85,7 @@ api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'A
 #dropdownlijst
 combo_list=[]
 original_list = []
-combo_list.append(Provincie("Nederland", 52.375029, 4.630962))
+combo_list.append(Provincie("Nederland", 52.1009, 5.6463))
 combo_list.append(Provincie("Noord-Holland", 52.375029, 4.630962))
 combo_list.append(Provincie("Zuid-Holland", 52.090737, 5.121420))
 combo_list.append(Provincie("Zeeland", 51.494030, 3.849681))
@@ -94,10 +94,10 @@ combo_list.append(Provincie("Flevoland", 52.527978, 5.595350))
 combo_list.append(Provincie("Overijssel", 52.438781, 6.501641))
 combo_list.append(Provincie("Limburg", 51.442723, 6.060872))
 combo_list.append(Provincie("Drenthe", 52.947601, 6.623058))
-combo_list.append(Provincie("Groningen", 53.220028, 6.570447))
+combo_list.append(Provincie("Groningen", 53.2887, 6.7061))
 combo_list.append(Provincie("Friesland", 53.164164, 5.781754))
 combo_list.append(Provincie("Gelderland", 52.04515, 5.871823))
-combo_list.append(Provincie("Utrecht",52.1195, 5.1944))
+combo_list.append(Provincie("Utrecht",52.0209538, 4.8687419))
     
 for obj in combo_list:
     original_list.append(obj.provincie)
@@ -114,15 +114,15 @@ def switch(result):
     if result == "Nederland":
         return 7
     elif result == "Noord-Holland":
-        return 9
+        return 8.3
     elif result == "Zuid-Holland":
         return 9
     elif result == "Zeeland":
-        return 9
+        return 9.3
     elif result == "Noord-Brabant":
         return 9
     elif result == "Flevoland":
-        return 9
+        return 9.4
     elif result == "Overijssel":
         return 9
     elif result == "Limburg":
@@ -130,13 +130,13 @@ def switch(result):
     elif result == "Drenthe":
         return 9      
     elif result == "Groningen":
-        return 9
+        return 9.5
     elif result == "Friesland":
         return 9
     elif result == "Gelderland":
         return 9
     elif result == "Utrecht":
-        return 9
+        return 10
 
 ######### foliummap
 logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
