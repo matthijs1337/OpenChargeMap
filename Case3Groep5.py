@@ -156,7 +156,7 @@ for i, x in api_clean.iterrows():
                                   icon_size=(50, 50))
                        ).add_to(marker_cluster2)
 a = add_categorical_legend(a, 'Legenda',
-                             colors = api_clean
+                             colors = api_clean)
 st_data = st_folium(a, width = 725)
 
 
