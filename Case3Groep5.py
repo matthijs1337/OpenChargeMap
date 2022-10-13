@@ -107,7 +107,7 @@ Provinice_df = api_clean.merge(postcode_split,how="left",left_on="Postcode_cijfe
 if result == "Nederland":
     api_provincie = Provinice_df
     a = folium.Map(location=querystring, zoom_start=7)
-    else:
+else:
       api_provincie = Provinice_df[Provinice_df['Provincie'] == result]
       a = folium.Map(location=querystring, zoom_start=8.5)
         
