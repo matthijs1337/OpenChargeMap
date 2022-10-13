@@ -111,31 +111,31 @@ for obj in combo_list:
 st.write(f'QueryString {querystring}')
 
 def switch(result):
-    if obj.provincie == "Nederland":
+    if result == "Nederland":
         return 7
-    elif obj.provincie == "Noord-Holland":
+    elif result == "Noord-Holland":
         return 9
-    elif obj.provincie == "Zuid-Holland":
+    elif result == "Zuid-Holland":
         return 9
-    elif obj.provincie == "Zeeland":
+    elif result == "Zeeland":
         return 9
-    elif obj.provincie == "Noord-Brabant":
+    elif result == "Noord-Brabant":
         return 9
-    elif obj.provincie == "Flevoland":
+    elif result == "Flevoland":
         return 9
-    elif obj.provincie == "Overijssel":
+    elif result == "Overijssel":
         return 9
-    elif obj.provincie == "Limburg":
+    elif result == "Limburg":
         return 9
-    elif obj.provincie == "Drenthe":
+    elif result == "Drenthe":
         return 9      
-    elif obj.provincie == "Groningen":
+    elif result == "Groningen":
         return 9
-    elif obj.provincie == "Friesland":
+    elif result == "Friesland":
         return 9
-    elif obj.provincie == "Gelderland":
+    elif result == "Gelderland":
         return 9
-    elif obj.provincie == "Utrecht":
+    elif result == "Utrecht":
         return 9
 
 ######### foliummap
