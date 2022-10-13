@@ -77,7 +77,7 @@ for obj in combo_list:
   if (result == obj.provincie):
     querystring = [obj.latitude, obj.longitude]
       
-def switch(obj.provincie):
+def switch(result):
     if obj.provincie == "Nederland":
         return 7
     elif obj.provincie == "Noord-Holland":
