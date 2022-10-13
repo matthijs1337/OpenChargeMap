@@ -85,6 +85,7 @@ api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'A
 #dropdownlijst
 combo_list=[]
 original_list = []
+combo_list.append(Provincie("Nederland", 52.375029, 4.630962))
 combo_list.append(Provincie("Noord-Holland", 52.375029, 4.630962))
 combo_list.append(Provincie("Zuid-Holland", 52.090737, 5.121420))
 combo_list.append(Provincie("Zeeland", 51.494030, 3.849681))
@@ -101,8 +102,7 @@ combo_list.append(Provincie("Utrecht",52.1195, 5.1944))
 for obj in combo_list:
     original_list.append(obj.provincie)
     
-result = st.sidebar.selectbox('Selecteer de provincie', original_list)
-st.write(f'De gekozen provincie {result}')
+result = st.selectbox('Selecteer de provincie', original_list)
    
 for obj in combo_list:
     if (result == obj.provincie):
@@ -141,7 +141,7 @@ def switch(result):
 ######### foliummap
 logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
 
-a = folium.Map(location=querystring, zoom_start=7)
+a = folium.Map(location=querystring, zoom_start=switch)
 
 marker_cluster2 = MarkerCluster().add_to(a)
 
