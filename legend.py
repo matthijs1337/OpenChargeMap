@@ -100,3 +100,10 @@ def add_categorical_legend(folium_map, title, colors, labels):
     folium_map.get_root().header.add_child(folium.Element(script + css))
 
     return folium_map
+
+
+
+
+m = add_categorical_legend(m, 'Type meetpunt',
+                             colors = ['rgb(139,69,19)', 'rgb(139,96,19)'],
+                             labels = ['Achtergrond', 'Bachtergrond'])
