@@ -120,7 +120,7 @@ a = folium.Map(location=querystring, zoom_start=switch)
 marker_cluster2 = MarkerCluster().add_to(a)
         
 #for i, x in api_provincie.iterrows():
-      folium.Marker(location=[x['Latitude'], x['Longitude']],
+folium.Marker(location=[x['Latitude'], x['Longitude']],
                     popup="<strong>" + x['Title'] +"<strong>",
                     tooltip='Klik hier om het adres te zien',
                     fill_opacity=0.7,
