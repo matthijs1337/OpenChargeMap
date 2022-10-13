@@ -100,9 +100,9 @@ st.write(f'QueryString {querystring}')
 #zoom van Nederland = 7 
 #zoom van provincies = 9 
 #zoom_start gelijk staan aan if statement
- if (obj.provincie == "Nederland"):
+if (obj.provincie == "Nederland"):
     zoom = zoom_start=7
- if (obj.provincie == "Noord-Holland"):
+if (obj.provincie == "Noord-Holland"):
     zoom = zoom_start=9
 
 ######### foliummap
