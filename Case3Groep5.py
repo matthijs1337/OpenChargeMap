@@ -4,7 +4,7 @@ Created on Wed Oct 12 10:53:51 2022
 
 @author: matth
 """
-# In[1]:
+
 
 
 import pandas as pd
@@ -27,7 +27,7 @@ class Provincie:
   def show_all(self):
     print (self.provincie, self.longitude, self.latitude)
 
-# In[2]:
+
 
 
 url = "https://api.openchargemap.io/v3/poi/?maxresults=7900"
@@ -41,47 +41,33 @@ headers = {"Content-Type": "application/json", "X-API-Key": "2401ef11-fde1-4b32-
 response = requests.request("GET", url, headers=headers, params=params)
 
 
-# In[3]:
 
 
 json=response.json()
 Open_Charge_Map=pd.DataFrame(json)
 api_data=Open_Charge_Map
-#api_data
 
-
-# In[4]:
 
 dfadress = pd.DataFrame(api_data['AddressInfo'].values.tolist())
-#dfadress
 
-
-# In[5]:
 
 
 api_data.drop(['AddressInfo'], axis=1)
 
 mergedDf = dfadress.merge(api_data, how='right', left_index=True, right_index=True)
-#mergedDf
 
-
-# In[6]:
 
 
 api_clean= mergedDf[['ID_y', 'NumberOfPoints',
        'DateCreated', 'UsageCost', 'ID_x', 'Title', 'AddressLine1', 'Town', 'Postcode', 'CountryID',
        'Latitude', 'Longitude'
        ]]
-#api_clean
 
-
-# In[7]:
 
 
 api_clean.rename(columns={'ID_y': 'ID', 'ID_x': 'Adress_ID', 'AddressLine1' : 'Adress'})
 
 
-# In[14]:
 #dropdownlijst
 combo_list=[]
 original_list = []
@@ -102,15 +88,13 @@ combo_list.append(Provincie("Utrecht",52.1195, 5.1944))
 for obj in combo_list:
     original_list.append(obj.provincie)
     
-result = st.sidebar.selectbox('Selecteer de locatie', original_list)
+result = st.selectbox('Selecteer de locatie', original_list)
    
 for obj in combo_list:
     if (result == obj.provincie):
       querystring = [obj.longitude, obj.latitude]
       
 st.write(f'QueryString {querystring}')
-
-#slider voor zoom
 
 
 
@@ -127,8 +111,13 @@ for i, x in api_clean.iterrows():
                        tooltip='Klik hier om het adres te zien',
                        fill_opacity=0.7,
                        fill= True,
-                       #icon= folium.features.CustomIcon(logo_url,\
-                                  #icon_size=(50, 50))
+                       icon= folium.features.CustomIcon(logo_url,\
+                                  icon_size=(50, 50)),
+                       <script>
+                       L_PREFER_CANVAS = true;
+                       L_NO_TOUCH = false;
+                       L_DISABLE_3D = false;
+                       </script>
                        ).add_to(marker_cluster2)
 
 st_data = st_folium(a, width = 725)
