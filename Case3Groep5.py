@@ -119,7 +119,7 @@ logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-i
 a = folium.Map(location=querystring, zoom_start=switch)        
 marker_cluster2 = MarkerCluster().add_to(a)
         
-#for i, x in api_provincie.iterrows():
+for i, x in api_provincie.iterrows():
 folium.Marker(location=[x['Latitude'], x['Longitude']],
                     popup="<strong>" + x['Title'] +"<strong>",
                     tooltip='Klik hier om het adres te zien',
