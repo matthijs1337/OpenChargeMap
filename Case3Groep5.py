@@ -104,7 +104,7 @@ postcode_split = pd.DataFrame(dict2)
 api_clean['Postcode_cijfer'] = api_clean.Postcode.apply(postcode_nummers)
 Provinice_df = api_clean.merge(postcode_split,how="left",left_on="Postcode_cijfer",right_on="Postcode_cijfer")
   
-  if result == "Nederland":
+if result == "Nederland":
     api_provincie = Provinice_df
     a = folium.Map(location=querystring, zoom_start=7)
     else:
