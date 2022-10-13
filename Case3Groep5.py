@@ -142,7 +142,7 @@ def switch(result):
 ######### foliummap
 logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
 
-a = folium.map.Choropleth(location=querystring, zoom_start=switch(result))
+a = folium.Map.Choropleth(location=querystring, zoom_start=switch(result))
 
 marker_cluster2 = MarkerCluster().add_to(a)
 
