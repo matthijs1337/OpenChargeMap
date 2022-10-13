@@ -76,20 +76,47 @@ result = st.selectbox('Selecteer de provincie', original_list)
 for obj in combo_list:
   if (result == obj.provincie):
     querystring = [obj.latitude, obj.longitude]
-       
-  
-if result == "Nederland":
-    api_provincie = Provinice_df
-    a = folium.Map(location=querystring, zoom_start=7)
-else:
-      api_provincie = Provinice_df[Provinice_df['Provincie'] == result]
-      a = folium.Map(location=querystring, zoom_start=8.5)
+      
+def switch(result):
+    if result == "Nederland":
+        return 7
+    elif result == "Noord-Holland":
+        return 9
+    elif result == "Zuid-Holland":
+        return 9
+    elif result == "Zeeland":
+        return 9
+    elif result == "Noord-Brabant":
+        return 9
+    elif result == "Flevoland":
+        return 9
+    elif result == "Overijssel":
+        return 9
+    elif result == "Limburg":
+        return 9
+    elif result == "Drenthe":
+        return 9      
+    elif result == "Groningen":
+        return 9
+    elif result == "Friesland":
+        return 9
+    elif result == "Gelderland":
+        return 9
+    elif result == "Utrecht":
+        return 9
+      
+#if result == "Nederland":
+    #api_provincie = Provinice_df
+    #a = folium.Map(location=querystring, zoom_start=7)
+#else:
+      #api_provincie = Provinice_df[Provinice_df['Provincie'] == result]
+      #a = folium.Map(location=querystring, zoom_start=8.5)
         
         
 ######### foliummap
 logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
         
-        
+a = folium.Map(location=querystring, zoom_start=switch)        
 marker_cluster2 = MarkerCluster().add_to(a)
         
 
