@@ -96,12 +96,19 @@ for obj in combo_list:
       
 st.write(f'QueryString {querystring}')
 
-
+#if statement zoom
+#zoom van Nederland = 7 
+#zoom van provincies = 9 
+#zoom_start gelijk staan aan if statement
+ if (obj.provincie == "Nederland"):
+    zoom = zoom_start=7
+ if (obj.provincie == "Noord-Holland"):
+    zoom = zoom_start=9
 
 ######### foliummap
 logo_url = 'https://www.laadpalenwijzer.nl/wp-content/uploads/2022/03/laadpaal-icon-by-monkik.png'
 
-a = folium.Map(location=querystring, zoom_start=7, prefer_canvas=True)
+a = folium.Map(location=querystring, zoom_start=zoom, prefer_canvas=True)
 
 marker_cluster2 = MarkerCluster().add_to(a)
 
