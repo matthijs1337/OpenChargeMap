@@ -153,7 +153,7 @@ for i, x in api_clean.iterrows():
                        fill_opacity=0.7,
                        fill= True,
                        icon= folium.features.CustomIcon(logo_url,\
-                                  icon_size=(50, 50))
+                                  icon_size=(50, 50)),
                   legend_name="aantal laadpalen",
                        ).add_to(marker_cluster2)
 
