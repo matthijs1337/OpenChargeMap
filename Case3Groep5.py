@@ -76,33 +76,7 @@ result = st.selectbox('Selecteer de provincie', original_list)
 for obj in combo_list:
   if (result == obj.provincie):
     querystring = [obj.latitude, obj.longitude]
-        
-         #importeren
-postcode_provincie = pd.read_excel('postcode_provincie.xls',index_col=None)
-        
-        #opsplitsen
-postcode_provincie['list'] = postcode_provincie.apply(lambda x: opsplitsen_postcode(x['aanelkaar']), axis = 1)
-df_data = pd.DataFrame(postcode_provincie['list'].values.tolist(), index=postcode_provincie.index)
-postcode_provincie = pd.concat([postcode_provincie, df_data], axis=1).drop('list', axis=1)
-postcode_provincie.columns = ['orgineel', "begin", 'einde', 'provincie']
-postcode_provincie.head()
-        
-#missende postcodes toevoegen
-postcode = []
-provincie = []
-        
-row = 0
-for i, row in postcode_provincie.iterrows():
-  lijst = (row.einde - row.begin+1)* [row.provincie]
-  lijst2 = [*range(row.begin, row.einde+1)]
-  provincie += lijst
-  postcode += lijst2
-        
-dict2 = {'Postcode_cijfer': postcode, 'Provincie': provincie}
-postcode_split = pd.DataFrame(dict2)
-        
-api_clean['Postcode_cijfer'] = api_clean.Postcode.apply(postcode_nummers)
-Provinice_df = api_clean.merge(postcode_split,how="left",left_on="Postcode_cijfer",right_on="Postcode_cijfer")
+       
   
 if result == "Nederland":
     api_provincie = Provinice_df
