@@ -129,4 +129,4 @@ for i, x in api_provincie.iterrows():
                                                      icon_size=(50, 50))
                    ).add_to(marker_cluster2)
         
-        st_data = st_folium(a, width = 725)
+st_data = st_folium(a, width = 725)
