@@ -112,12 +112,7 @@ for i, x in api_clean.iterrows():
                        fill_opacity=0.7,
                        fill= True,
                        icon= folium.features.CustomIcon(logo_url,\
-                                  icon_size=(50, 50)),
-                       <script>
-                       L_PREFER_CANVAS = true;
-                       L_NO_TOUCH = false;
-                       L_DISABLE_3D = false;
-                       </script>
+                                  icon_size=(50, 50))
                        ).add_to(marker_cluster2)
 
 st_data = st_folium(a, width = 725)
