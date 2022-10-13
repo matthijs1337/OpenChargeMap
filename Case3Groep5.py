@@ -154,7 +154,7 @@ for i, x in api_clean.iterrows():
                        fill= True,
                        icon= folium.features.CustomIcon(logo_url,\
                                   icon_size=(50, 50))
-                      legend_name="aantal laadpalen",
+                  legend_name="aantal laadpalen",
                        ).add_to(marker_cluster2)
 
 st_data = st_folium(a, width = 725)
