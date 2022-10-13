@@ -77,32 +77,32 @@ for obj in combo_list:
   if (result == obj.provincie):
     querystring = [obj.latitude, obj.longitude]
       
-def switch(result):
-    if result == "Nederland":
+def switch(obj.provincie):
+    if obj.provincie == "Nederland":
         return 7
-    elif result == "Noord-Holland":
+    elif obj.provincie == "Noord-Holland":
         return 9
-    elif result == "Zuid-Holland":
+    elif obj.provincie == "Zuid-Holland":
         return 9
-    elif result == "Zeeland":
+    elif obj.provincie == "Zeeland":
         return 9
-    elif result == "Noord-Brabant":
+    elif obj.provincie == "Noord-Brabant":
         return 9
-    elif result == "Flevoland":
+    elif obj.provincie == "Flevoland":
         return 9
-    elif result == "Overijssel":
+    elif obj.provincie == "Overijssel":
         return 9
-    elif result == "Limburg":
+    elif obj.provincie == "Limburg":
         return 9
-    elif result == "Drenthe":
+    elif obj.provincie == "Drenthe":
         return 9      
-    elif result == "Groningen":
+    elif obj.provincie == "Groningen":
         return 9
-    elif result == "Friesland":
+    elif obj.provincie == "Friesland":
         return 9
-    elif result == "Gelderland":
+    elif obj.provincie == "Gelderland":
         return 9
-    elif result == "Utrecht":
+    elif obj.provincie == "Utrecht":
         return 9
       
 #if result == "Nederland":
