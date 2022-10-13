@@ -155,7 +155,7 @@ for i, x in api_clean.iterrows():
                        icon= folium.features.CustomIcon(logo_url,\
                                   icon_size=(50, 50))
                        ).add_to(marker_cluster2)
-a = add_categorical_legend(a, 'Legenda', colors = api_clean)
+a = add_categorical_legend(a, 'Legenda', colors = df['laadpaal'], labels = ["groen", "geel", "rood"]
 st_data = st_folium(a, width = 725)
 
 
